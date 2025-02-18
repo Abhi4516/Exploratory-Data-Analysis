@@ -31,9 +31,9 @@ iris["Sepal.Length"].value_counts()
 
 bins = [1,2,3,4,5]
 plt.figure(figsize=(5,4))
-sns.set() # light color background
+sns.set() 
 sns.distplot(iris["Sepal.Width"],bins = bins, kde=False)
-plt.xticks(bins) # x-axis (1-8)
+plt.xticks(bins) 
 plt.title("Histogram of Sepal.Width")
 plt.show()
 iris["Sepal.Width"].value_counts()
@@ -41,9 +41,9 @@ iris["Sepal.Width"].value_counts()
 # 'Petal.Length'
 bins = [1,2,3,4,5,6,7]
 plt.figure(figsize=(5,4))
-sns.set() # light color background
+sns.set() 
 sns.distplot(iris["Petal.Length"],bins = bins, kde=False)
-plt.xticks(bins) # x-axis (1-8)
+plt.xticks(bins) 
 plt.title("Histogram of Petal.Length")
 plt.show()
 iris["Petal.Length"].value_counts()
@@ -69,7 +69,7 @@ iris.dtypes
 iris.columns
 
 # 'Sepal.Length'
-#You can use pd.cut with parameter right = False as:
+
 pd.cut(iris['Sepal.Length'], bins=3, labels=np.arange(3), right=False)
 
 #How the binning is done:
@@ -104,7 +104,7 @@ import pandas as pd
 
 df = pd.read_csv(r"C:\Users\D\Desktop\New Assignments  Keys\Datasets\iris.csv")
 df.isnull().sum()
-# no null values present in the columns
+
 
 df.drop_duplicates
 #drop duplicate values if any
